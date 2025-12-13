@@ -1,42 +1,60 @@
-# Ignore bundler/build artifacts
-build/
-dist/
-.next/
-.turbo/
+# Node.js dependencies
 node_modules/
-*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Ignore OS generated files
+# Package lock files (managed by CI/CD)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Expo & React Native caches & build artifacts
+.expo/
+.expo-shared/
+.expo/web/
+web-build/
+.expo/**/node_modules/
+.expo/**/dist/
+.expo/**/tmp/
+.expo/**/temp/
+.expo/**/cache/
+
+# Metro bundler cache
+metro-cache/
+
+# iOS and Android native build directories
+ios/
+android/
+
+# Fastlane reports
+fastlane/report.xml
+
+# Xcode workspace files
+*.xcworkspace
+*.xcodeproj
+
+# macOS system files
 .DS_Store
+
+# Windows system files
 Thumbs.db
 
-# Ignore IDE/editor specific files
+# VSCode settings
 .vscode/
-.idea/
-*.swp
-*.swo
 
-# Ignore environment variables
+# Log files
+*.log
+
+# Environment variable files (never commit secrets)
 .env
-.env*
-!.env.example
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Ignore local configuration files
-config.local.json
-
-# Ignore Expo / React Native specific build artifacts
-ios/build/
-android/build/
-android/app/build/
-android/gradle/
-*.keystore
-
-# Ignore cached files
-.cache/
-__pycache__/
-*.pyc
-
-# Ignore test reports and coverage
-coverage/
-.nyc_output/
-junit.xml
+# Temporary files
+tmp/
+temp/
